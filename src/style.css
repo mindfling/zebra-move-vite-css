@@ -1,0 +1,123 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(177, 8, 193, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+/* todo here zebra styles */
+.page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.container {
+  /* border: 1px solid lawngreen; */
+  width: 90%;
+  height: 60%;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% { left: 0; }
+  50% { left: 90%; }
+  100% { left: 0; }
+}
+
+.zebra {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+}
+.zebra-item {
+  display: flex;
+  background-color: black;
+  width: 3%;
+  height: 100%;
+}
+.zebra-box {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 10%;
+  height: 8%;
+  animation-name: move;
+  animation-duration: 15s;
+  animation-delay: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.zebra-box_yellow {
+  background-color: #ffff00;
+  top: 21%;
+}
+.zebra-box_blue {
+  background-color: #2b0054;
+  bottom: 21%;
+}
+
+
+.page-title {
+  display: block;
+  position: fixed;
+  top: 0;
+  font-size: 3.2em;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.page-title:hover {
+  text-shadow: 0 0 2em darkviolet;
+  scale: 102%;
+  /* filter: drop-shadow(0 0 2em #7505c5aa); */
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 4em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #3178c6aa);
+}
